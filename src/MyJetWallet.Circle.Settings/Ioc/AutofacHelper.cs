@@ -19,6 +19,12 @@ namespace MyJetWallet.Circle.Settings.Ioc
                 .SingleInstance();
 
             builder
+                .RegisterInstance(
+                    new MyNoSqlReadRepository<CircleBlockchainEntity>(myNoSqlClient, CircleBlockchainEntity.TableName))
+                .As<IMyNoSqlServerDataReader<CircleBlockchainEntity>>()
+                .SingleInstance();
+
+            builder
                 .RegisterType<WalletMapper>()
                 .As<IWalletMapper>()
                 .SingleInstance();
@@ -36,9 +42,19 @@ namespace MyJetWallet.Circle.Settings.Ioc
                     CircleAssetEntity.TableName, true))
                 .As<IMyNoSqlServerDataWriter<CircleAssetEntity>>()
                 .SingleInstance();
+            
+            builder
+                .RegisterInstance(new MyNoSqlServerDataWriter<CircleBlockchainEntity>(myNoSqlWriterUrl,
+                    CircleBlockchainEntity.TableName, true))
+                .As<IMyNoSqlServerDataWriter<CircleBlockchainEntity>>()
+                .SingleInstance();
 
             builder.RegisterType<CircleAssetSettingsService>()
                 .As<ICircleAssetSettingsService>()
+                .SingleInstance();
+
+            builder.RegisterType<CircleBlockchainSettingsService>()
+                .As<ICircleBlockchainSettingsService>()
                 .SingleInstance();
         }
     }
