@@ -2,7 +2,7 @@
 
 namespace MyJetWallet.Circle.Settings.Services
 {
-    public interface IBlockchainMapper
+    public interface ICircleBlockchainMapper
     {
         CircleBlockchainEntity BlockchainToCircleBlockchain(string brokerId, string blockchainSymbol);
         CircleBlockchainEntity CircleBlockchainToBlockchain(string brokerId, string circleBlockchain);

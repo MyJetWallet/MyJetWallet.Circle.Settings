@@ -8,11 +8,11 @@ using Newtonsoft.Json;
 
 namespace MyJetWallet.Circle.Settings.Services
 {
-    public class BlockchainMapper : IBlockchainMapper
+    public class CircleBlockchainMapper : ICircleBlockchainMapper
     {
         private readonly IMyNoSqlServerDataReader<CircleBlockchainEntity> _circleBlockchains;
 
-        public BlockchainMapper(IMyNoSqlServerDataReader<CircleBlockchainEntity> circleBlockchains)
+        public CircleBlockchainMapper(IMyNoSqlServerDataReader<CircleBlockchainEntity> circleBlockchains)
         {
             _circleBlockchains = circleBlockchains;
         }

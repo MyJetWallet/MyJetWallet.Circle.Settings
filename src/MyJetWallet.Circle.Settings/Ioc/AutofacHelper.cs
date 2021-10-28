@@ -25,13 +25,18 @@ namespace MyJetWallet.Circle.Settings.Ioc
                 .SingleInstance();
 
             builder
-                .RegisterType<WalletMapper>()
-                .As<IWalletMapper>()
+                .RegisterType<CircleWalletMapper>()
+                .As<ICircleWalletMapper>()
                 .SingleInstance();
 
             builder
-                .RegisterType<AssetMapper>()
-                .As<IAssetMapper>()
+                .RegisterType<CircleAssetMapper>()
+                .As<ICircleAssetMapper>()
+                .SingleInstance();
+
+            builder
+                .RegisterType<CircleBlockchainMapper>()
+                .As<ICircleBlockchainMapper>()
                 .SingleInstance();
         }
 

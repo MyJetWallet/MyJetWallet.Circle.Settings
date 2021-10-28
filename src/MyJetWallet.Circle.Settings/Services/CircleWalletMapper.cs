@@ -3,7 +3,7 @@
 
 namespace MyJetWallet.Circle.Settings.Services
 {
-    public class WalletMapper : IWalletMapper
+    public class CircleWalletMapper : ICircleWalletMapper
     {
         public IJetWalletIdentity CircleLabelToWallet(string label)
         {

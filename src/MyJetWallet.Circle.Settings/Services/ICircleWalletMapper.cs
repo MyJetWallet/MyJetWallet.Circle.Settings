@@ -2,7 +2,7 @@
 
 namespace MyJetWallet.Circle.Settings.Services
 {
-    public interface IWalletMapper
+    public interface ICircleWalletMapper
     {
         IJetWalletIdentity CircleLabelToWallet(string label);
         string WalletToCircleLabel(IJetWalletIdentity wallet);

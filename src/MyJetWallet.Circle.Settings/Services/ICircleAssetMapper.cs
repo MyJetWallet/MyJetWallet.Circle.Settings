@@ -2,7 +2,7 @@
 
 namespace MyJetWallet.Circle.Settings.Services
 {
-    public interface IAssetMapper
+    public interface ICircleAssetMapper
     {
         CircleAssetEntity AssetToCircleAsset(string brokerId, string assetSymbol);
         CircleAssetEntity CircleAssetToAsset(string brokerId, string circleAsset);
