@@ -23,6 +23,8 @@ namespace MyJetWallet.Circle.Settings.Services
                 throw new Exception("Cannot create circle asset. AssetSymbol cannot be empty");
             if (string.IsNullOrEmpty(entity.CircleAsset))
                 throw new Exception("Cannot create circle asset. CircleAsset cannot be empty");
+            if (string.IsNullOrEmpty(entity.CircleWalletId))
+                throw new Exception("Cannot create circle asset. CircleWalletId cannot be empty");
 
             var newEntity = CircleAssetEntity.Create(entity);
 
@@ -42,6 +44,8 @@ namespace MyJetWallet.Circle.Settings.Services
                 throw new Exception("Cannot update circle asset. AssetSymbol cannot be empty");
             if (string.IsNullOrEmpty(entity.CircleAsset))
                 throw new Exception("Cannot update circle asset. CircleAsset cannot be empty");
+            if (string.IsNullOrEmpty(entity.CircleWalletId))
+                throw new Exception("Cannot update circle asset. CircleWalletId cannot be empty");
             
             var newEntity = CircleAssetEntity.Create(entity);
 
