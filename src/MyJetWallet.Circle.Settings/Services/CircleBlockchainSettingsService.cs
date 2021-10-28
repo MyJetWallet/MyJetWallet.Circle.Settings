@@ -29,7 +29,7 @@ namespace MyJetWallet.Circle.Settings.Services
             var existingItem = await _circleBlockchains.GetAsync(newEntity.PartitionKey, newEntity.RowKey);
             if (existingItem != null) throw new Exception("Cannot create circle Blockchain. Already exist");
 
-            await _circleBlockchains.InsertAsync(entity);
+            await _circleBlockchains.InsertAsync(newEntity);
 
             return true;
         }
@@ -48,7 +48,7 @@ namespace MyJetWallet.Circle.Settings.Services
             var existingEntity = await _circleBlockchains.GetAsync(newEntity.PartitionKey, newEntity.RowKey);
             if (existingEntity == null) throw new Exception("Cannot update circle Blockchain. circle Blockchain not found");
 
-            await _circleBlockchains.InsertOrReplaceAsync(entity);
+            await _circleBlockchains.InsertOrReplaceAsync(newEntity);
 
             return true;
         }

@@ -31,7 +31,7 @@ namespace MyJetWallet.Circle.Settings.Services
             var existingItem = await _circleAssets.GetAsync(newEntity.PartitionKey, newEntity.RowKey);
             if (existingItem != null) throw new Exception("Cannot create circle asset. Already exist");
 
-            await _circleAssets.InsertAsync(entity);
+            await _circleAssets.InsertAsync(newEntity);
 
             return true;
         }
@@ -52,7 +52,7 @@ namespace MyJetWallet.Circle.Settings.Services
             var existingEntity = await _circleAssets.GetAsync(newEntity.PartitionKey, newEntity.RowKey);
             if (existingEntity == null) throw new Exception("Cannot update circle asset. circle asset not found");
 
-            await _circleAssets.InsertOrReplaceAsync(entity);
+            await _circleAssets.InsertOrReplaceAsync(newEntity);
 
             return true;
         }
