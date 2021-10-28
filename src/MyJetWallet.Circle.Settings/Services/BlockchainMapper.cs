@@ -17,14 +17,14 @@ namespace MyJetWallet.Circle.Settings.Services
             _circleBlockchains = circleBlockchains;
         }
 
-        public string BlockchainToCircleBlockchain(string brokerId, string blockchainSymbol)
+        public CircleBlockchainEntity BlockchainToCircleBlockchain(string brokerId, string blockchainSymbol)
         {
             var blockchainEntities = _circleBlockchains.Get(CircleBlockchainEntity.GeneratePartitionKey(brokerId))
                 .Where(e => e.Blockchain == blockchainSymbol).ToList();
 
             if (!blockchainEntities.Any())
             {
-                return string.Empty;
+                return null;
             }
 
             if (blockchainEntities.Count > 1)
@@ -35,15 +35,13 @@ namespace MyJetWallet.Circle.Settings.Services
 
             var entity = blockchainEntities.First();
 
-            return entity.CircleBlockchain;
+            return entity;
         }
 
-        public string CircleBlockchainToBlockchain(string brokerId, string circleBlockchain)
+        public CircleBlockchainEntity CircleBlockchainToBlockchain(string brokerId, string circleBlockchain)
         {
-            var entity = _circleBlockchains.Get(CircleBlockchainEntity.GeneratePartitionKey(brokerId),
+            return _circleBlockchains.Get(CircleBlockchainEntity.GeneratePartitionKey(brokerId),
                 CircleBlockchainEntity.GeneratePartitionKey(circleBlockchain));
-
-            return entity == null ? string.Empty : entity.Blockchain;
         }
 
         public string GetTagSeparator(string brokerId, string assetSymbol)

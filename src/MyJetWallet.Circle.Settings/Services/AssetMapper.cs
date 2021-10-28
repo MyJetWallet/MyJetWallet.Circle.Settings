@@ -17,13 +17,13 @@ namespace MyJetWallet.Circle.Settings.Services
             _circleCoins = circleCoins;
         }
 
-        public string AssetToCircleAsset(string brokerId, string assetSymbol)
+        public CircleAssetEntity AssetToCircleAsset(string brokerId, string assetSymbol)
         {
             var assetEntities = _circleCoins.Get(CircleAssetEntity.GeneratePartitionKey(brokerId)).Where(e => e.AssetSymbol == assetSymbol).ToList();
 
             if (!assetEntities.Any())
             {
-                return string.Empty;
+                return null;
             }
 
             if (assetEntities.Count > 1)
@@ -34,14 +34,12 @@ namespace MyJetWallet.Circle.Settings.Services
 
             var entity = assetEntities.First();
 
-            return entity.AssetSymbol;
+            return entity;
         }
 
-        public string CircleAssetToAsset(string brokerId, string circleAsset)
+        public CircleAssetEntity CircleAssetToAsset(string brokerId, string circleAsset)
         {
-            var entity = _circleCoins.Get(CircleAssetEntity.GeneratePartitionKey(brokerId), CircleAssetEntity.GeneratePartitionKey(circleAsset));
-
-            return entity == null ? string.Empty : entity.AssetSymbol;
+            return _circleCoins.Get(CircleAssetEntity.GeneratePartitionKey(brokerId), CircleAssetEntity.GeneratePartitionKey(circleAsset));
         }
     }
 }
