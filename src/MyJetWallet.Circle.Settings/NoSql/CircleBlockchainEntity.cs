@@ -12,6 +12,8 @@ namespace MyJetWallet.Circle.Settings.NoSql
         public string BrokerId { get; set; }
         public string CircleBlockchain { get; set; }
         public string Blockchain { get; set; }
+        
+        public string TagSeparator { get; set; }
 
         public static CircleBlockchainEntity Create(CircleBlockchainEntity circleBlockchainEntity)
         {
@@ -21,7 +23,8 @@ namespace MyJetWallet.Circle.Settings.NoSql
                 RowKey = GenerateRowKey(circleBlockchainEntity.CircleBlockchain),
                 BrokerId = circleBlockchainEntity.BrokerId,
                 CircleBlockchain = circleBlockchainEntity.CircleBlockchain,
-                Blockchain = circleBlockchainEntity.Blockchain
+                Blockchain = circleBlockchainEntity.Blockchain,
+                TagSeparator = circleBlockchainEntity.TagSeparator
             };
 
             return entity;

@@ -10,16 +10,16 @@ namespace MyJetWallet.Circle.Settings.Services
 {
     public class BlockchainMapper : IBlockchainMapper
     {
-        private readonly IMyNoSqlServerDataReader<CircleBlockchainEntity> _circleCoins;
+        private readonly IMyNoSqlServerDataReader<CircleBlockchainEntity> _circleBlockchains;
 
-        public BlockchainMapper(IMyNoSqlServerDataReader<CircleBlockchainEntity> circleCoins)
+        public BlockchainMapper(IMyNoSqlServerDataReader<CircleBlockchainEntity> circleBlockchains)
         {
-            _circleCoins = circleCoins;
+            _circleBlockchains = circleBlockchains;
         }
 
         public string BlockchainToCircleBlockchain(string brokerId, string blockchainSymbol)
         {
-            var blockchainEntities = _circleCoins.Get(CircleBlockchainEntity.GeneratePartitionKey(brokerId))
+            var blockchainEntities = _circleBlockchains.Get(CircleBlockchainEntity.GeneratePartitionKey(brokerId))
                 .Where(e => e.Blockchain == blockchainSymbol).ToList();
 
             if (!blockchainEntities.Any())
@@ -40,10 +40,18 @@ namespace MyJetWallet.Circle.Settings.Services
 
         public string CircleBlockchainToBlockchain(string brokerId, string circleBlockchain)
         {
-            var entity = _circleCoins.Get(CircleBlockchainEntity.GeneratePartitionKey(brokerId),
+            var entity = _circleBlockchains.Get(CircleBlockchainEntity.GeneratePartitionKey(brokerId),
                 CircleBlockchainEntity.GeneratePartitionKey(circleBlockchain));
 
             return entity == null ? string.Empty : entity.Blockchain;
+        }
+
+        public string GetTagSeparator(string brokerId, string assetSymbol)
+        {
+            var map = _circleBlockchains.Get(CircleAssetEntity.GeneratePartitionKey(brokerId),
+                CircleAssetEntity.GenerateRowKey(assetSymbol));
+
+            return map == null ? string.Empty : map.TagSeparator;
         }
     }
 }
