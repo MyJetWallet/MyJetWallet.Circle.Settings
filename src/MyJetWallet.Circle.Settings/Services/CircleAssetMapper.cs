@@ -39,7 +39,7 @@ namespace MyJetWallet.Circle.Settings.Services
 
         public CircleAssetEntity CircleAssetToAsset(string brokerId, string circleAsset)
         {
-            return _circleCoins.Get(CircleAssetEntity.GeneratePartitionKey(brokerId), CircleAssetEntity.GeneratePartitionKey(circleAsset));
+            return _circleCoins.Get(CircleAssetEntity.GeneratePartitionKey(brokerId), CircleAssetEntity.GenerateRowKey(circleAsset));
         }
     }
 }

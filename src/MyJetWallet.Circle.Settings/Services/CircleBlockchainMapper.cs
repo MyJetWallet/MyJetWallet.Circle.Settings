@@ -41,7 +41,7 @@ namespace MyJetWallet.Circle.Settings.Services
         public CircleBlockchainEntity CircleBlockchainToBlockchain(string brokerId, string circleBlockchain)
         {
             return _circleBlockchains.Get(CircleBlockchainEntity.GeneratePartitionKey(brokerId),
-                CircleBlockchainEntity.GeneratePartitionKey(circleBlockchain));
+                CircleBlockchainEntity.GenerateRowKey(circleBlockchain));
         }
 
         public string GetTagSeparator(string brokerId, string assetSymbol)
