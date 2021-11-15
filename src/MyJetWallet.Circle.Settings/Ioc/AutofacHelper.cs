@@ -2,6 +2,7 @@
 using Autofac;
 using MyJetWallet.Circle.Settings.NoSql;
 using MyJetWallet.Circle.Settings.Services;
+using MyJetWallet.Sdk.NoSql;
 using MyNoSqlServer.Abstractions;
 using MyNoSqlServer.DataReader;
 using MyNoSqlServer.DataWriter;
@@ -10,19 +11,13 @@ namespace MyJetWallet.Circle.Settings.Ioc
 {
     public static class AutofacHelper
     {
-        public static void RegisterCircleSettingsReader(this ContainerBuilder builder, IMyNoSqlSubscriber myNoSqlClient)
+        public static void RegisterCircleSettingsReader(this ContainerBuilder builder, MyNoSqlTcpClient myNoSqlClient)
         {
             builder
-                .RegisterInstance(
-                    new MyNoSqlReadRepository<CircleAssetEntity>(myNoSqlClient, CircleAssetEntity.TableName))
-                .As<IMyNoSqlServerDataReader<CircleAssetEntity>>()
-                .SingleInstance();
+                .RegisterMyNoSqlReader<CircleAssetEntity>(myNoSqlClient, CircleAssetEntity.TableName);
 
             builder
-                .RegisterInstance(
-                    new MyNoSqlReadRepository<CircleBlockchainEntity>(myNoSqlClient, CircleBlockchainEntity.TableName))
-                .As<IMyNoSqlServerDataReader<CircleBlockchainEntity>>()
-                .SingleInstance();
+                .RegisterMyNoSqlReader<CircleBlockchainEntity>(myNoSqlClient, CircleBlockchainEntity.TableName);
 
             builder
                 .RegisterType<CircleWalletMapper>()
@@ -43,16 +38,10 @@ namespace MyJetWallet.Circle.Settings.Ioc
         public static void RegisterCircleSettingsWriter(this ContainerBuilder builder, Func<string> myNoSqlWriterUrl)
         {
             builder
-                .RegisterInstance(new MyNoSqlServerDataWriter<CircleAssetEntity>(myNoSqlWriterUrl,
-                    CircleAssetEntity.TableName, true))
-                .As<IMyNoSqlServerDataWriter<CircleAssetEntity>>()
-                .SingleInstance();
+                .RegisterMyNoSqlWriter<CircleAssetEntity>(myNoSqlWriterUrl, CircleAssetEntity.TableName);
             
             builder
-                .RegisterInstance(new MyNoSqlServerDataWriter<CircleBlockchainEntity>(myNoSqlWriterUrl,
-                    CircleBlockchainEntity.TableName, true))
-                .As<IMyNoSqlServerDataWriter<CircleBlockchainEntity>>()
-                .SingleInstance();
+                .RegisterMyNoSqlWriter<CircleBlockchainEntity>(myNoSqlWriterUrl, CircleBlockchainEntity.TableName);
 
             builder.RegisterType<CircleAssetSettingsService>()
                 .As<ICircleAssetSettingsService>()
