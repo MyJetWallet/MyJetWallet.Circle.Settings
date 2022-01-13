@@ -12,6 +12,8 @@ namespace MyJetWallet.Circle.Settings.NoSql
         public string BrokerId { get; set; }
         public string CircleAsset { get; set; }
         public string AssetSymbol { get; set; }
+
+        public string AssetTokenSymbol { get; set; }
         public string CircleWalletId { get; set; }
 
         public static CircleAssetEntity Create(CircleAssetEntity circleAssetEntity)
@@ -23,7 +25,8 @@ namespace MyJetWallet.Circle.Settings.NoSql
                 BrokerId = circleAssetEntity.BrokerId,
                 CircleAsset = circleAssetEntity.CircleAsset,
                 AssetSymbol = circleAssetEntity.AssetSymbol,
-                CircleWalletId = circleAssetEntity.CircleWalletId
+                CircleWalletId = circleAssetEntity.CircleWalletId,
+                AssetTokenSymbol = circleAssetEntity.AssetTokenSymbol,
             };
 
             return entity;

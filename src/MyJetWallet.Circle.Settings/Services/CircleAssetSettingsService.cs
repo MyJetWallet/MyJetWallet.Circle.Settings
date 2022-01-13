@@ -21,6 +21,8 @@ namespace MyJetWallet.Circle.Settings.Services
                 throw new Exception("Cannot create circle asset. BrokerId cannot be empty");
             if (string.IsNullOrEmpty(entity.AssetSymbol))
                 throw new Exception("Cannot create circle asset. AssetSymbol cannot be empty");
+            if (string.IsNullOrEmpty(entity.AssetTokenSymbol))
+                throw new Exception("Cannot create circle asset. AssetTokenSymbol cannot be empty");
             if (string.IsNullOrEmpty(entity.CircleAsset))
                 throw new Exception("Cannot create circle asset. CircleAsset cannot be empty");
             if (string.IsNullOrEmpty(entity.CircleWalletId))
@@ -46,7 +48,9 @@ namespace MyJetWallet.Circle.Settings.Services
                 throw new Exception("Cannot update circle asset. CircleAsset cannot be empty");
             if (string.IsNullOrEmpty(entity.CircleWalletId))
                 throw new Exception("Cannot update circle asset. CircleWalletId cannot be empty");
-            
+            if (string.IsNullOrEmpty(entity.AssetTokenSymbol))
+                throw new Exception("Cannot create circle asset. AssetTokenSymbol cannot be empty");
+
             var newEntity = CircleAssetEntity.Create(entity);
 
             var existingEntity = await _circleAssets.GetAsync(newEntity.PartitionKey, newEntity.RowKey);
@@ -63,6 +67,8 @@ namespace MyJetWallet.Circle.Settings.Services
                 throw new Exception("Cannot delete circle asset. BrokerId cannot be empty");
             if (string.IsNullOrEmpty(entity.AssetSymbol))
                 throw new Exception("Cannot delete circle asset. AssetSymbol cannot be empty");
+            if (string.IsNullOrEmpty(entity.AssetTokenSymbol))
+                throw new Exception("Cannot delete circle asset. AssetTokenSymbol cannot be empty");
 
             var existingEntity = await _circleAssets.GetAsync(CircleAssetEntity.GeneratePartitionKey(entity.BrokerId),
                 CircleAssetEntity.GenerateRowKey(entity.CircleAsset));

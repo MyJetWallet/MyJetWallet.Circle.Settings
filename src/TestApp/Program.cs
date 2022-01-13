@@ -24,7 +24,11 @@ namespace TestApp
 
             var list = new List<CircleAssetEntity>();
 
-            list.Add(CircleAssetEntity.Create(new CircleAssetEntity{BrokerId = broker, AssetSymbol = "USD", CircleAsset = "CUSDC"}));
+            list.Add(CircleAssetEntity.Create(new CircleAssetEntity{
+                BrokerId = broker, 
+                AssetSymbol = "USD", 
+                AssetTokenSymbol = "USDC",
+                CircleAsset = "CUSDC"}));
 
             await clientAsset.CleanAndKeepMaxPartitions(0);
             await clientAsset.BulkInsertOrReplaceAsync(list);
