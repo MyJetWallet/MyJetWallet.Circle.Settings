@@ -6,5 +6,7 @@ namespace MyJetWallet.Circle.Settings.Services
     {
         CircleAssetEntity AssetToCircleAsset(string brokerId, string assetSymbol);
         CircleAssetEntity CircleAssetToAsset(string brokerId, string circleAsset);
+
+        CircleAssetEntity AssetToCircleTokenAsset(string brokerId, string assetTokenSymbol);
     }
 }
