@@ -1,0 +1,252 @@
+Country Name,Alpha 2,Alpha 3,Numeric,Bank Account Type
+,,,,
+,,,,
+Afghanistan,AF,AFG,4,
+Albania,AL,ALB,8,
+Algeria,DZ,DZA,12,
+American Samoa,AS,ASM,16,
+Andorra,AD,AND,20,SEPA
+Angola,AO,AGO,24,SWIFT
+Anguilla,AI,AIA,660,SWIFT
+Antarctica,AQ,ATA,10,
+Antigua and Barbuda,AG,ATG,28,
+Argentina,AR,ARG,32,SWIFT
+Armenia,AM,ARM,51,
+Aruba,AW,ABW,533,
+Australia,AU,AUS,36,SWIFT
+Austria,AT,AUT,40,SEPA
+Azerbaijan,AZ,AZE,31,SEPA
+Bahamas (the),BS,BHS,44,
+Bahrain,BH,BHR,48,
+Bangladesh,BD,BGD,50,
+Barbados,BB,BRB,52,
+Belarus,BY,BLR,112,
+Belgium,BE,BEL,56,SEPA
+Belize,BZ,BLZ,84,
+Benin,BJ,BEN,204,SWIFT
+Bermuda,BM,BMU,60,SWIFT
+Bhutan,BT,BTN,64,
+Bolivia (Plurinational State of),BO,BOL,68,
+"Bonaire, Sint Eustatius and Saba",BQ,BES,535,
+Bosnia and Herzegovina,BA,BIH,70,
+Botswana,BW,BWA,72,
+Bouvet Island,BV,BVT,74,
+Brazil,BR,BRA,76,SWIFT
+British Indian Ocean Territory (the),IO,IOT,86,
+Brunei Darussalam,BN,BRN,96,
+Bulgaria,BG,BGR,100,SEPA
+Burkina Faso,BF,BFA,854,SWIFT
+Burundi,BI,BDI,108,
+Cabo Verde,CV,CPV,132,
+Cambodia,KH,KHM,116,SWIFT
+Cameroon,CM,CMR,120,SWIFT
+Canada,CA,CAN,124,SWIFT
+Cayman Islands (the),KY,CYM,136,SWIFT
+Central African Republic (the),CF,CAF,140,
+Chad,TD,TCD,148,SWIFT
+Chile,CL,CHL,152,SWIFT
+China,CN,CHN,156,
+Christmas Island,CX,CXR,162,
+Cocos (Keeling) Islands (the),CC,CCK,166,
+Colombia,CO,COL,170,
+Comoros (the),KM,COM,174,
+Congo (the Democratic Republic of the),CD,COD,180,
+Congo (the),CG,COG,178,
+Cook Islands (the),CK,COK,184,
+Costa Rica,CR,CRI,188,
+Croatia,HR,HRV,191,SEPA
+Cuba,CU,CUB,192,
+Curaçao,CW,CUW,531,
+Cyprus,CY,CYP,196,
+Czechia,CZ,CZE,203,
+Côte d'Ivoire,CI,CIV,384,
+Denmark,DK,DNK,208,SEPA
+Djibouti,DJ,DJI,262,
+Dominica,DM,DMA,212,
+Dominican Republic (the),DO,DOM,214,
+Ecuador,EC,ECU,218,
+Egypt,EG,EGY,818,
+El Salvador,SV,SLV,222,
+Equatorial Guinea,GQ,GNQ,226,
+Eritrea,ER,ERI,232,
+Estonia,EE,EST,233,SEPA
+Eswatini,SZ,SWZ,748,
+Ethiopia,ET,ETH,231,
+Falkland Islands (the) [Malvinas],FK,FLK,238,
+Faroe Islands (the),FO,FRO,234,
+Fiji,FJ,FJI,242,
+Finland,FI,FIN,246,SEPA
+France,FR,FRA,250,SEPA
+French Guiana,GF,GUF,254,
+French Polynesia,PF,PYF,258,
+French Southern Territories (the),TF,ATF,260,
+Gabon,GA,GAB,266,
+Gambia (the),GM,GMB,270,
+Georgia,GE,GEO,268,
+Germany,DE,DEU,276,SEPA
+Ghana,GH,GHA,288,
+Gibraltar,GI,GIB,292,SEPA
+Greece,GR,GRC,300,SEPA
+Greenland,GL,GRL,304,
+Grenada,GD,GRD,308,
+Guadeloupe,GP,GLP,312,
+Guam,GU,GUM,316,SWIFT
+Guatemala,GT,GTM,320,SEPA
+Guernsey,GG,GGY,831,SWIFT
+Guinea,GN,GIN,324,
+Guinea-Bissau,GW,GNB,624,
+Guyana,GY,GUY,328,
+Haiti,HT,HTI,332,
+Heard Island and McDonald Islands,HM,HMD,334,
+Holy See (the),VA,VAT,336,SEPA
+Honduras,HN,HND,340,
+Hong Kong,HK,HKG,344,SWIFT
+Hungary,HU,HUN,348,SEPA
+Iceland,IS,ISL,352,SEPA
+India,IN,IND,356,SWIFT
+Indonesia,ID,IDN,360,SWIFT
+Iran (Islamic Republic of),IR,IRN,364,
+Iraq,IQ,IRQ,368,
+Ireland,IE,IRL,372,SEPA
+Isle of Man,IM,IMN,833,SWIFT
+Israel,IL,ISR,376,SEPA
+Italy,IT,ITA,380,SEPA
+Jamaica,JM,JAM,388,
+Japan,JP,JPN,392,SWIFT
+Jersey,JE,JEY,832,SWIFT
+Jordan,JO,JOR,400,SEPA
+Kazakhstan,KZ,KAZ,398,
+Kenya,KE,KEN,404,SWIFT
+Kiribati,KI,KIR,296,
+Korea (the Democratic People's Republic of),KP,PRK,408,SWIFT
+Korea (the Republic of),KR,KOR,410,SWIFT
+Kuwait,KW,KWT,414,
+Kyrgyzstan,KG,KGZ,417,
+Lao People's Democratic Republic (the),LA,LAO,418,
+Latvia,LV,LVA,428,SEPA
+Lebanon,LB,LBN,422,
+Lesotho,LS,LSO,426,
+Liberia,LR,LBR,430,
+Libya,LY,LBY,434,
+Liechtenstein,LI,LIE,438,SEPA
+Lithuania,LT,LTU,440,SEPA
+Luxembourg,LU,LUX,442,SEPA
+Macao,MO,MAC,446,
+Madagascar,MG,MDG,450,SWIFT
+Malawi,MW,MWI,454,SWIFT
+Malaysia,MY,MYS,458,SWIFT
+Maldives,MV,MDV,462,
+Mali,ML,MLI,466,
+Malta,MT,MLT,470,SEPA
+Marshall Islands (the),MH,MHL,584,
+Martinique,MQ,MTQ,474,
+Mauritania,MR,MRT,478,
+Mauritius,MU,MUS,480,
+Mayotte,YT,MYT,175,
+Mexico,MX,MEX,484,SWIFT
+Micronesia (Federated States of),FM,FSM,583,
+Moldova (the Republic of),MD,MDA,498,
+Monaco,MC,MCO,492,SEPA
+Mongolia,MN,MNG,496,
+Montenegro,ME,MNE,499,
+Montserrat,MS,MSR,500,
+Morocco,MA,MAR,504,
+Mozambique,MZ,MOZ,508,SWIFT
+Myanmar,MM,MMR,104,
+Namibia,NA,NAM,516,
+Nauru,NR,NRU,520,
+Nepal,NP,NPL,524,
+Netherlands (the),NL,NLD,528,SEPA
+New Caledonia,NC,NCL,540,
+New Zealand,NZ,NZL,554,SWIFT
+Nicaragua,NI,NIC,558,
+Niger (the),NE,NER,562,SWIFT
+Nigeria,NG,NGA,566,
+Niue,NU,NIU,570,
+Norfolk Island,NF,NFK,574,
+Northern Mariana Islands (the),MP,MNP,580,
+Norway,NO,NOR,578,SEPA
+Oman,OM,OMN,512,
+Pakistan,PK,PAK,586,
+Palau,PW,PLW,585,
+"Palestine, State of",PS,PSE,275,
+Panama,PA,PAN,591,
+Papua New Guinea,PG,PNG,598,
+Paraguay,PY,PRY,600,
+Peru,PE,PER,604,SWIFT
+Philippines (the),PH,PHL,608,SWIFT
+Pitcairn,PN,PCN,612,
+Poland,PL,POL,616,SEPA
+Portugal,PT,PRT,620,SEPA
+Puerto Rico,PR,PRI,630,SWIFT
+Qatar,QA,QAT,634,
+Republic of North Macedonia,MK,MKD,807,
+Romania,RO,ROU,642,SEPA
+Russian Federation (the),RU,RUS,643,
+Rwanda,RW,RWA,646,
+Réunion,RE,REU,638,
+Saint Barthélemy,BL,BLM,652,
+"Saint Helena, Ascension and Tristan da Cunha",SH,SHN,654,
+Saint Kitts and Nevis,KN,KNA,659,
+Saint Lucia,LC,LCA,662,
+Saint Martin (French part),MF,MAF,663,
+Saint Pierre and Miquelon,PM,SPM,666,
+Saint Vincent and the Grenadines,VC,VCT,670,
+Samoa,WS,WSM,882,
+San Marino,SM,SMR,674,SEPA
+Sao Tome and Principe,ST,STP,678,
+Saudi Arabia,SA,SAU,682,
+Senegal,SN,SEN,686,SWIFT
+Serbia,RS,SRB,688,
+Seychelles,SC,SYC,690,
+Sierra Leone,SL,SLE,694,
+Singapore,SG,SGP,702,SWIFT
+Sint Maarten (Dutch part),SX,SXM,534,
+Slovakia,SK,SVK,703,SEPA
+Slovenia,SI,SVN,705,SEPA
+Solomon Islands,SB,SLB,90,
+Somalia,SO,SOM,706,
+South Africa,ZA,ZAF,710,SWIFT
+South Georgia and the South Sandwich Islands,GS,SGS,239,
+South Sudan,SS,SSD,728,
+Spain,ES,ESP,724,SEPA
+Sri Lanka,LK,LKA,144,
+Sudan (the),SD,SDN,729,
+Suriname,SR,SUR,740,
+Svalbard and Jan Mayen,SJ,SJM,744,
+Sweden,SE,SWE,752,SEPA
+Switzerland,CH,CHE,756,SEPA
+Syrian Arab Republic,SY,SYR,760,
+Taiwan (Province of China),TW,TWN,158,SWIFT
+Tajikistan,TJ,TJK,762,
+"Tanzania, United Republic of",TZ,TZA,834,SWIFT
+Thailand,TH,THA,764,SWIFT
+Timor-Leste,TL,TLS,626,
+Togo,TG,TGO,768,
+Tokelau,TK,TKL,772,
+Tonga,TO,TON,776,
+Trinidad and Tobago,TT,TTO,780,
+Tunisia,TN,TUN,788,
+Turkey,TR,TUR,792,SEPA
+Turkmenistan,TM,TKM,795,
+Turks and Caicos Islands (the),TC,TCA,796,
+Tuvalu,TV,TUV,798,
+Uganda,UG,UGA,800,
+Ukraine,UA,UKR,804,
+United Arab Emirates (the),AE,ARE,784,SEPA
+United Kingdom of Great Britain and Northern Ireland (the),GB,GBR,826,SEPA
+United States Minor Outlying Islands (the),UM,UMI,581,SWIFT
+United States of America (the),US,USA,840,US
+Uruguay,UY,URY,858,
+Uzbekistan,UZ,UZB,860,SWIFT
+Vanuatu,VU,VUT,548,
+Venezuela (Bolivarian Republic of),VE,VEN,862,
+Viet Nam,VN,VNM,704,SWIFT
+Virgin Islands (British),VG,VGB,92,SEPA
+Virgin Islands (U.S.),VI,VIR,850,SWIFT
+Wallis and Futuna,WF,WLF,876,
+Western Sahara,EH,ESH,732,
+Yemen,YE,YEM,887,
+Zambia,ZM,ZMB,894,
+Zimbabwe,ZW,ZWE,716,
+Åland Islands,AX,ALA,248,

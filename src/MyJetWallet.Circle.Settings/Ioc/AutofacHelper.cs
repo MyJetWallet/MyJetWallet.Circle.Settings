@@ -51,5 +51,13 @@ namespace MyJetWallet.Circle.Settings.Ioc
                 .As<ICircleBlockchainSettingsService>()
                 .SingleInstance();
         }
+
+        public static void RegisterCircleCommonServices(this ContainerBuilder builder)
+        {
+            builder
+                .RegisterType<CircleWireCountriesService>()
+                .As<ICircleWireCountriesService>()
+                .SingleInstance();
+        }
     }
 }

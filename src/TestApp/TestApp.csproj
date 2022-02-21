@@ -6,6 +6,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Countries.csv" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Countries.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\MyJetWallet.Circle.Settings\MyJetWallet.Circle.Settings.csproj" />
   </ItemGroup>
 
