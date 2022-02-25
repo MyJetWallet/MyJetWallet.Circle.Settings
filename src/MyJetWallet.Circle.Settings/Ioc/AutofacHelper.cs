@@ -11,7 +11,7 @@ namespace MyJetWallet.Circle.Settings.Ioc
 {
     public static class AutofacHelper
     {
-        public static void RegisterCircleSettingsReader(this ContainerBuilder builder, MyNoSqlTcpClient myNoSqlClient)
+        public static void RegisterCircleSettingsReader(this ContainerBuilder builder, IMyNoSqlSubscriber myNoSqlClient)
         {
             builder
                 .RegisterMyNoSqlReader<CircleAssetEntity>(myNoSqlClient, CircleAssetEntity.TableName);
