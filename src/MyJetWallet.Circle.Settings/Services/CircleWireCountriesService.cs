@@ -17,6 +17,8 @@ namespace MyJetWallet.Circle.Settings.Services
             new BankAccountCountry() { CountryName = "Chad", Alpha2Code = "TD", Alpha3Code = "TCD", Numeric = 148, BankAccountType = BankAccountType.SWIFT },
             new BankAccountCountry() { CountryName = "Chile", Alpha2Code = "CL", Alpha3Code = "CHL", Numeric = 152, BankAccountType =   BankAccountType.SWIFT },
             new BankAccountCountry() { CountryName = "Croatia", Alpha2Code = "HR", Alpha3Code = "HRV", Numeric = 191, BankAccountType =     BankAccountType.SEPA },
+            new BankAccountCountry() { CountryName = "Cyprus", Alpha2Code = "CY", Alpha3Code = "CYP", Numeric = 196, BankAccountType =     BankAccountType.SEPA },
+
             new BankAccountCountry() { CountryName = "Denmark", Alpha2Code = "DK", Alpha3Code = "DNK", Numeric = 208, BankAccountType =     BankAccountType.SEPA },
             new BankAccountCountry() { CountryName = "Estonia", Alpha2Code = "EE", Alpha3Code = "EST", Numeric = 233, BankAccountType =     BankAccountType.SEPA },
             new BankAccountCountry() { CountryName = "Finland", Alpha2Code = "FI", Alpha3Code = "FIN", Numeric = 246, BankAccountType =     BankAccountType.SEPA },
